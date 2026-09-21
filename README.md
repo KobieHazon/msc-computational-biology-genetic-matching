@@ -64,7 +64,7 @@ The suite checks input validation, non-mutating rank conversion, fitness semanti
 - `assignment/`: supplied exercise brief, converted to a PDF
 - `data/GA_input.txt`: supplied 30-by-30 preference input; the recovered local filename was normalized to the name used in the brief
 - `src/genetic_matching/`: solver, validated parser, reporting, and command-line interface
-- `results/historical-plots/`: all 33 distinct recovered experiment plots and a provenance note
+- `results/historical-plots/`: all 33 distinct recovered experiment plots and a background note
 - `tests/`: focused behavior and reproducibility checks
 
 ## Implementation notes
