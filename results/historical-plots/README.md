@@ -1,6 +1,6 @@
 # Historical Plot Record
 
-This directory retains all 33 distinct plots recovered with the coauthored source. They depict 240-generation experiments completed from June 30 through July 4, 2024.
+This directory retains all 33 distinct plots with the coauthored source. They depict 240-generation experiments completed from June 30 through July 4, 2024.
 
 - Fifteen files preserve best-fitness histories only.
 - Six later runs preserve complete best, average, and worst fitness triplets.

@@ -162,7 +162,7 @@ class MatchingGA:
         offspring: npt.NDArray[np.int_],
         _ga_instance: FitnessMetricsGA,
     ) -> npt.NDArray[np.int_]:
-        """Apply the recovered swap mutation while preserving permutations."""
+        """Apply the swap mutation while preserving permutations."""
         num_mutations = math.floor(self._mutation_probability * offspring.shape[1])
         for offspring_index in range(offspring.shape[0]):
             for _ in range(num_mutations):

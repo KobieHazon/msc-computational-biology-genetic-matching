@@ -31,13 +31,13 @@ uv sync --dev
 
 ## Usage
 
-Run one deterministic attempt using the recovered population and generation settings:
+Run one deterministic attempt using the population and generation settings:
 
 ```bash
 uv run genetic-matching data/GA_input.txt --attempts 1 --jobs 1 --seed 2024
 ```
 
-This regression case finishes with fitness `1568`. It is a regression-test seed applied to the unmodified recovered algorithm, not a recovered seed from the historical experiments.
+This regression case finishes with fitness `1568`. It is a regression-test seed applied to the unmodified algorithm, not a seed from the historical experiments.
 
 Run the full 100-attempt search:
 
@@ -62,19 +62,15 @@ The suite checks input validation, non-mutating rank conversion, fitness semanti
 ## Repository Structure
 
 - `assignment/`: supplied exercise brief, converted to a PDF
-- `data/GA_input.txt`: supplied 30-by-30 preference input; the recovered local filename was normalized to the name used in the brief
+- `data/GA_input.txt`: supplied 30-by-30 preference input; the local filename was normalized to the name used in the brief
 - `src/genetic_matching/`: solver, validated parser, reporting, and command-line interface
-- `results/historical-plots/`: all 33 distinct recovered experiment plots and a background note
+- `results/historical-plots/`: all 33 distinct experiment plots and a background note
 - `tests/`: focused behavior and reproducibility checks
 
-## Implementation notes
+## Reproducibility
 
-No separate report was recovered. The 33 plots are therefore retained as the available experiment record. Several historical runs reached fitness `1611`, but their seeds and complete launch parameters were not recorded, so the README does not claim that they can be reproduced exactly.
-
-The maintained version adds a portable CLI, deterministic per-attempt seeds and outputs, bounded worker selection, input validation, non-mutating conversion, current packaging, and regression tests. PyGAD remains pinned to `3.3.1`: changing the offspring-array conversion behavior or PyGAD generation can change the stochastic trajectory even with the same seed.
+The plots in `results/historical-plots/` include runs reaching fitness `1611`; their seeds and full launch parameters were not recorded. PyGAD is pinned to `3.3.1` because library-version changes can alter a stochastic run even with the same seed.
 
 ## Authorship
 
-Solution and generated experiment plots by Kobie Hazon and Daniel Ben Zion. The exercise brief and input are identified as supplied material solely to distinguish them from the coauthored work; this label does not assert ownership by a university or any other institution.
-
-No repository-wide license is declared because the repository combines original work with supplied material whose reuse terms were not recorded.
+Solution and generated experiment plots by Kobie Hazon and Daniel Ben Zion.
