@@ -63,13 +63,13 @@ The suite checks input validation, non-mutating rank conversion, fitness semanti
 
 - `assignment/`: supplied exercise brief, converted to a PDF
 - `data/GA_input.txt`: supplied 30-by-30 preference input; the local filename was normalized to the name used in the brief
-- `src/genetic_matching/`: solver, validated parser, reporting, and command-line interface
-- `results/historical-plots/`: all 33 distinct experiment plots and a background note
+- `src/`: solver, validated parser, reporting, and command-line interface
+- `results/`: all 33 distinct experiment plots and a background note
 - `tests/`: focused behavior and reproducibility checks
 
 ## Reproducibility
 
-The plots in `results/historical-plots/` include runs reaching fitness `1611`; their seeds and full launch parameters were not recorded. PyGAD is pinned to `3.3.1` because library-version changes can alter a stochastic run even with the same seed.
+The plots in `results/` include runs reaching fitness `1611`; their seeds and full launch parameters were not recorded. PyGAD is pinned to `3.3.1` because library-version changes can alter a stochastic run even with the same seed.
 
 ## Authorship
 
